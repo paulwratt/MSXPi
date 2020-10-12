@@ -18,7 +18,7 @@ L Connector:Raspberry_Pi_2_3 J1
 U 1 1 5EDA5A35
 P 1750 6300
 F 0 "J1" H 1100 7550 50  0000 C CNN
-F 1 "Raspberry_Pi_Zero_2_3" V 1750 6400 50  0000 C CNN
+F 1 "J1 - Raspberry_Pi_Zero_2_3" V 1750 6400 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 1750 6300 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1750 6300 50  0001 C CNN
 	1    1750 6300
@@ -340,26 +340,11 @@ NoConn ~ 1950 5000
 Text Notes 7350 7500 0    59   ~ 12
 MSXPi v1.1
 Text Notes 8150 7650 0    59   ~ 12
-July, 2020
+October, 2020
 Text Notes 10650 7650 0    59   ~ 12
-2
+3
 Text Notes 7100 6700 0    59   ~ 12
 Ronivon Costa
-$Comp
-L EPM3064ALC44-10:EPM3064ALC44-10 U1
-U 1 1 5F21A6E6
-P 5450 2750
-F 0 "U1" H 5450 4515 50  0000 C CNN
-F 1 "EPM3064ALC44-10" H 5450 4424 50  0000 C CNN
-F 2 "MyFootprints:PLCC127P1765X1765X457-44N" H 5450 2750 50  0001 L BNN
-F 3 "Altera" H 5450 2750 50  0001 L BNN
-F 4 "1549412" H 5450 2750 50  0001 L BNN "Field4"
-F 5 "51R0503" H 5450 2750 50  0001 L BNN "Field5"
-F 6 "EPM3064ALC44-10" H 5450 2750 50  0001 L BNN "Field6"
-F 7 "44-PLCC" H 5450 2750 50  0001 L BNN "Field7"
-	1    5450 2750
-	1    0    0    -1  
-$EndComp
 Text GLabel 6500 2750 2    28   Input ~ 0
 D3
 Text GLabel 6500 2950 2    28   Input ~ 0
@@ -394,17 +379,9 @@ Text GLabel 8300 3450 0    28   Input ~ 0
 ROM_A14
 Wire Wire Line
 	6450 3750 6500 3750
-Text GLabel 6500 1650 2    28   Input ~ 0
-A6
-Wire Wire Line
-	6450 1650 6500 1650
-Wire Wire Line
-	6450 1750 6500 1750
-Text GLabel 6500 1450 2    28   Input ~ 0
-SPI_MOSI
 Text GLabel 6500 2150 2    28   Input ~ 0
 D2
-Text GLabel 6500 2250 2    28   Input ~ 0
+Text GLabel 6500 4050 2    28   Input ~ 0
 SPI_RDY
 Text GLabel 6500 2350 2    28   Input ~ 0
 D4
@@ -420,11 +397,9 @@ Wire Wire Line
 	6450 2150 6500 2150
 Wire Wire Line
 	6450 2050 6500 2050
-Text GLabel 6500 1550 2    28   Input ~ 0
-BUSDIR
 Wire Wire Line
 	6450 1450 6500 1450
-Text GLabel 6500 1350 2    28   Input ~ 0
+Text GLabel 6500 2250 2    28   Input ~ 0
 A7
 Wire Wire Line
 	6450 1350 6500 1350
@@ -473,15 +448,13 @@ Text GLabel 6050 7100 2    28   Input ~ 0
 mem_oe
 Text GLabel 8300 1850 0    28   Input ~ 0
 mem_oe
-Text GLabel 6500 1750 2    28   Input ~ 0
-SPI_SCLK
-Text GLabel 6500 4050 2    28   Input ~ 0
+Text GLabel 6500 1650 2    28   Input ~ 0
 TDI
-Text GLabel 6500 4150 2    28   Input ~ 0
+Text GLabel 6500 1550 2    28   Input ~ 0
 TCK
-Text GLabel 6500 4250 2    28   Input ~ 0
+Text GLabel 6500 1350 2    28   Input ~ 0
 TDO
-Text GLabel 6500 4350 2    28   Input ~ 0
+Text GLabel 6500 1450 2    28   Input ~ 0
 TMS
 Wire Wire Line
 	6450 4050 6500 4050
@@ -489,8 +462,6 @@ Wire Wire Line
 	6450 4150 6500 4150
 Wire Wire Line
 	6450 4250 6500 4250
-Wire Wire Line
-	6450 4350 6500 4350
 $Comp
 L power:+3.3V #PWR02
 U 1 1 5F7E43E2
@@ -734,14 +705,6 @@ Wire Wire Line
 Wire Wire Line
 	4350 2850 4450 2850
 NoConn ~ 4450 1850
-Wire Wire Line
-	6450 1550 6500 1550
-Text GLabel 6500 1950 2    28   Input ~ 0
-RD
-Text GLabel 6500 1850 2    28   Input ~ 0
-WAIT
-Wire Wire Line
-	6450 1850 6500 1850
 Text GLabel 2100 1550 0    28   Input ~ 0
 WAIT
 Wire Wire Line
@@ -906,8 +869,6 @@ Text GLabel 8300 3350 0    28   Input ~ 0
 A13
 Wire Wire Line
 	2650 1350 2700 1350
-Wire Wire Line
-	6450 1950 6500 1950
 NoConn ~ 2650 1750
 Text GLabel 2700 1250 2    28   Input ~ 0
 CS2
@@ -1719,4 +1680,43 @@ F 3 "~" H 3400 4200 50  0001 C CNN
 	1    3400 4200
 	1    0    0    -1  
 $EndComp
+$Comp
+L EPM3064ATC4410:EPM3064ATC44-10N U1
+U 1 1 5F857D7E
+P 5450 2650
+F 0 "U1" H 5450 4315 50  0000 C CNN
+F 1 "EPM3064ATC44-10N" H 5450 4224 50  0000 C CNN
+F 2 "MyFootprints:QFP80P1200X1200X120-44N" H 5450 2650 50  0001 L BNN
+F 3 "1549417" H 5450 2650 50  0001 L BNN
+F 4 "EPM3064ATC44-10N" H 5450 2650 50  0001 L BNN "Field4"
+F 5 "44-TQFP" H 5450 2650 50  0001 L BNN "Field5"
+F 6 "51R0505" H 5450 2650 50  0001 L BNN "Field6"
+F 7 "Altera" H 5450 2650 50  0001 L BNN "Field7"
+	1    5450 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1950 6500 1950
+Wire Wire Line
+	6450 1850 6500 1850
+Text GLabel 6500 1850 2    28   Input ~ 0
+WAIT
+Text GLabel 6500 1950 2    28   Input ~ 0
+RD
+Wire Wire Line
+	6450 1550 6500 1550
+Text GLabel 6500 4150 2    28   Input ~ 0
+SPI_SCLK
+Text GLabel 6500 3950 2    28   Input ~ 0
+BUSDIR
+Text GLabel 6500 4250 2    28   Input ~ 0
+SPI_MOSI
+Wire Wire Line
+	6450 1750 6500 1750
+Wire Wire Line
+	6450 1650 6500 1650
+Text GLabel 6500 1750 2    28   Input ~ 0
+A6
+Wire Wire Line
+	6450 3950 6500 3950
 $EndSCHEMATC
