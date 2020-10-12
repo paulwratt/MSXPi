@@ -41,6 +41,16 @@ password: raspberry
 
 * Step 2: Copy all MSXPi commands form the /software/target to your MSX-DOS SD card (or disk). Use pwifi command from MSX-DOS to setup the wifi network and key, and MSXPi is fully ready to use.
 
+Writing the EEPROM - 32K game
+1. Set jumpers: SLTSL,WR,CS12,A15
+2. Write the ROM: at28c256 /s 1 game.rom
+3. Boot the MSX
+
+Writing the EEPROM - 2 x 16K game
+1. Copy game1_16k+game2_16k to game32k.rom (for example, on mac/linux: cat game1 game2 > game32k.rom)
+2. Write using same jumpers setup as described above for a 32K game
+3. Boot MSX with jumper in A15: will boot game1_16k
+4. Boot MSX with jumper in A14: will boot gme2_16k
 
 Relese Notes
 ============
